@@ -28,17 +28,22 @@ public class Server extends Process {
 	 * 
 	 */
 	public void heartBeat() {
-		while(this.isAlive()){ //check if this process is alive
+		while(true){ //check if this process is alive
 			//send out heartbeat message
 			//Writer write = new OutputStreamWriter(this.getOutputStream());
 				//write.write("heartbeat");
+			if(this.isAlive()){
 				this.rc.setMessage("heartbeat");
-				try {
-					this.waitFor(1, TimeUnit.SECONDS);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				System.out.println("alive");
+			} else {
+				System.out.println("not alive");
+			}
+			try {
+				this.waitFor(1, TimeUnit.SECONDS);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		}
 	}
@@ -122,11 +127,12 @@ public class Server extends Process {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("hi");
 		Receiver rc = new Receiver();
 		Server serverProc = new Server(rc);
 		serverProc.heartBeat();
-		serverProc.crashGenerator();
+		//serverProc.crashGenerator();
+		rc.run();
 	}
 
 }

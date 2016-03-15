@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author derekleung
@@ -17,8 +18,22 @@ public class Receiver extends Process {
 
 	private String message = ""; 
 	
-	public void recieve(){
-		
+	public void run(){
+		while(true){
+			if(message.equalsIgnoreCase("heartbeat")){
+				System.out.println("Received heartbeat message");
+				this.message="";
+			} else {
+				System.out.println("Didn't receive heartbeat message");
+				//need to restart server process
+			}
+			try {
+				this.waitFor(1, TimeUnit.SECONDS);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public void setMessage(String message){
