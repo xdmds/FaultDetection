@@ -9,7 +9,7 @@ heartbeat
 
 Output will be as follows
 
--A print statement before starting the Server and Receiver processes
+-A print statement before starting the Server and Receiver processes<br/>
 -A print statement after starting the Server and Receiver processes
 -A print statement stating what integer the crash generator generated. If it generates a "1", the server process will "fail"
 	-If the Server process fails, a print statement will say the server process is destroyed and restarting
