@@ -14,7 +14,8 @@ import java.net.UnknownHostException;
 /**
  * @author derekleung
  * The receiving process which receives heartbeat messages from the
- * server process.
+ * server process. Prints to stdout notifying user when connection to the
+ * server is lost and no heartbeat message is received
  */
 public class Receiver {
 	
