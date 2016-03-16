@@ -1,7 +1,7 @@
 # FaultDetection
 heartbeat
 
-1. Navigate to the directory containing HeartBeat.jar, Receiver.jar, and Server.jar. They All need to be in the same directory
+1. Navigate to the "jar files" directory containing HeartBeat.jar, Receiver.jar, and Server.jar. They All need to be in the same directory
 
 2. Run the following command "java -jar HeartBeat.jar" in the command line
 
