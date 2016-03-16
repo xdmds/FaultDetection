@@ -12,7 +12,7 @@ Output will be as follows
 -A print statement before starting the Server and Receiver processes<br/>
 -A print statement after starting the Server and Receiver processes<br/>
 -A print statement stating what integer the crash generator generated. If it generates a "1", the server process will "fail"<br/>
-	&nbsp;-If the Server process fails, a print statement will say the server process is destroyed and restarting<br/>
+	-If the Server process fails, a print statement will say the server process is destroyed and restarting<br/>
 	-The server process will be destroyed, then restarted in 3 seconds.<br/>
 	-The Receiver will notice it is no longer connected to the Server and didn't receive a heartbeat message.<br/>
 	-Receiver prints this information<br/>
