@@ -14,7 +14,9 @@ Output will be as follows
 -A print statement stating what integer the crash generator generated. If it generates a "1", the server process will "fail"
 	-If the Server process fails, a print statement will say the server process is destroyed and restarting
 	-The server process will be destroyed, then restarted in 3 seconds.
-	-Normal operation will resume.
--print statements with a boolean stating whether or not each process is alive
+	-The Receiver will notice it is no longer connected to the Server and didn't receive a heartbeat message.
+	-Receiver prints this information
+	-Normal operation will resume once the server process is restarted.
+-print statements with a boolean stating whether or not each process is alive (Monitors kind of implements ping echo. This can easily be removed if we only want heartbeat)
 -print statement with the message the Server sends
 -print statement with the message the Receiver gets
